@@ -3,6 +3,8 @@ from django.utils.timezone import now
 
 from meetup.subscriptions.models import Subscription
 
+admin.site.site_header = 'Meetup DEVTEC Guaratinguetá'
+
 
 class SubscriptionModelAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'created_at', 'subscribed_today')
