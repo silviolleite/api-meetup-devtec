@@ -1,0 +1,15 @@
+Olá! Tudo bem?
+
+Muito obrigado por se inscrever no Meetup DEVTEC Guaratinguetá.
+
+Estes foram os dados que você nos forneceu em sua inscrição:
+
+Nome: {{ name }}
+Email: {{ email }}
+
+
+Atenciosamente
+--
+Equipe Meetup DEVTEC Guaratinguetá
+
+Não responda este e-mail.

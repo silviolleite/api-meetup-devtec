@@ -30,7 +30,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[], cast=Csv())
 
-DEFAULT_FROM_EMAIL = 'contato@meetup.com.br'
+DEFAULT_FROM_EMAIL = 'meetupdevtec@gmail.com'
 # Application definition
 
 INSTALLED_APPS = (
@@ -120,10 +120,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 EMAIL_BACKEND = config('EMAIL_BACKEND')
 EMAIL_HOST = config('EMAIL_HOST')
 EMAIL_PORT = config('EMAIL_PORT', cast=int)
-EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-
+EMAIL_USE_SSL = config('EMAIL_USE_SSL', cast=bool)
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
