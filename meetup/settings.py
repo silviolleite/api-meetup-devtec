@@ -61,9 +61,10 @@ MIDDLEWARE = [
 ]
 CORS_ORIGIN_WHITELIST = (
     'google.com',
-    '.herokuapp.com',
+    'herokuapp.com',
     'localhost:3000',
-    '127.0.0.1:3000'
+    '127.0.0.1:3000',
+    'https://devtec-guaratingueta.herokuapp.com',
 )
 
 ROOT_URLCONF = 'meetup.urls'
