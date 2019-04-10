@@ -64,7 +64,7 @@ CORS_ORIGIN_WHITELIST = (
     'herokuapp.com',
     'localhost:3000',
     '127.0.0.1:3000',
-    'devtec-guaratingueta.herokuapp.com',
+    'meetup-intecfatec.herokuapp.com',
 )
 
 ROOT_URLCONF = 'meetup.urls'
