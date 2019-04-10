@@ -7,6 +7,7 @@ from meetup.subscriptions.models import Subscription
 from django.core import mail
 from django.template.loader import render_to_string
 
+
 class SampleViewSet(mixins.CreateModelMixin,
                     viewsets.GenericViewSet):
     pass
