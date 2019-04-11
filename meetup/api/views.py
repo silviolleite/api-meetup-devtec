@@ -1,4 +1,5 @@
 from rest_framework import viewsets, mixins
+from rest_framework.permissions import AllowAny
 
 from meetup import settings
 from meetup.api.serializers import SpeakerSerializer, SubjectSerializer, SubscriptionSerializer
@@ -8,8 +9,7 @@ from django.core import mail
 from django.template.loader import render_to_string
 
 
-class SampleViewSet(mixins.CreateModelMixin,
-                    viewsets.GenericViewSet):
+class SampleViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
     pass
 
 
@@ -26,8 +26,10 @@ class SubjectViewSet(viewsets.ReadOnlyModelViewSet):
 class SubscriptionViewSet(SampleViewSet):
     queryset = Subscription.objects.all()
     serializer_class = SubscriptionSerializer
+    permission_classes = (AllowAny,)
 
     def perform_create(self, serializer):
+        serializer.save()
         self._send_mail(
             'Confirmação de inscrição',
             settings.DEFAULT_FROM_EMAIL,
